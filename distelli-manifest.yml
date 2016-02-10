@@ -23,6 +23,8 @@ bmcgeheecap1/example-install-tomcat:
     #- sudo apt-get -y install oracle-java7-set-default
     #- sudo apt-get -y install tomcat7
     - sudo yum install -y tomcat
+  PostInstall:
+    - sudo /usr/sbin/tomcat start || true
     - publicip=$(curl -s ident.me)
     - echo "Your tomcat 7 server is available at http://$publicip:$PORT"
     
