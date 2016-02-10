@@ -15,13 +15,14 @@ bmcgeheecap1/example-install-tomcat:
     # 
     # These steps are built for Ubuntu 14
     #
-    - sudo add-apt-repository -y ppa:webupd8team/java
-    - sudo apt-get -y update
-    - echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
-    - echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections    
-    - sudo apt-get -y install oracle-java7-installer
-    - sudo apt-get -y install oracle-java7-set-default
-    - sudo apt-get -y install tomcat7
+    #- sudo add-apt-repository -y ppa:webupd8team/java
+    #- sudo apt-get -y update
+    #- echo debconf shared/accepted-oracle-license-v1-1 select true | sudo debconf-set-selections
+    #- echo debconf shared/accepted-oracle-license-v1-1 seen true | sudo debconf-set-selections    
+    #- sudo apt-get -y install oracle-java7-installer
+    #- sudo apt-get -y install oracle-java7-set-default
+    #- sudo apt-get -y install tomcat7
+    sudo yum install -y tomcat
     - publicip=$(curl -s ident.me)
     - echo "Your tomcat 7 server is available at http://$publicip:$PORT"
     
