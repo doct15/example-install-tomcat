@@ -1,4 +1,4 @@
-<username>/example-install-tomcat:
+bmcgeheecap1/example-install-tomcat:
 
   Env:
     # Set the below enviornment variables for your environment
